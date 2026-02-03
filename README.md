@@ -1,4 +1,4 @@
-# AAMotoMic - Android Auto Microphone Router for Motorcycles - version 6.0 (Beta) - January 31, 2026
+# AAMotoMic - Android Auto Microphone Router for Motorcycles - version 8.0 (Beta) - January 31, 2026
 # Author - tillekesoft aka tilleke/moster67
 
 ## The Problem: Why Voice Commands Fail on a Bike
