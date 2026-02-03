@@ -93,7 +93,7 @@ You need AAMotoMic if you:
 
 AAMotoMic is installed by opening an APK (sideload). You need to allow installs from outside the Play Store first.
 
-1. **Get the APK** – Download from the Releases page or the link provided by the developer.
+1. **Get the APK** – Download from the Releases page.
 2. **Allow install from unknown sources:**
    - **Android 8–9:** Settings → Security (or Apps & notifications) → **Unknown sources** or **Install unknown apps** → turn on. (Menu names vary by brand.)
    - **Android 10+:** Settings → Apps → **Special app access** → **Install unknown apps** → select the app that will open the APK (e.g. Chrome, Files) → **Allow from this source**.
