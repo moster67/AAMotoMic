@@ -1,4 +1,4 @@
-# AAMotoMic - Android Auto Microphone Router for Motorcycles - version 8.0 (Beta) - January 31, 2026
+# AAMotoMic - Android Auto Microphone Router for Motorcycles - version 9.0 (Beta) - February 10, 2026
 # Author - tillekesoft aka tilleke/moster67
 
 ## The Problem: Why Voice Commands Fail on a Bike
@@ -91,9 +91,10 @@ You need AAMotoMic if you:
 
 ## Installing the app
 
-AAMotoMic is installed by opening an APK (sideload). You need to allow installs from outside the Play Store first.
+You need to allow installs from outside the Play Store first.
 
-1. **Get the APK** – Download from the Releases page.
+1. **Get the APK** – Download from the Releases page at GitHub
+   https://github.com/moster67/AAMotoMic/releases
 2. **Allow install from unknown sources:**
    - **Android 8–9:** Settings → Security (or Apps & notifications) → **Unknown sources** or **Install unknown apps** → turn on. (Menu names vary by brand.)
    - **Android 10+:** Settings → Apps → **Special app access** → **Install unknown apps** → select the app that will open the APK (e.g. Chrome, Files) → **Allow from this source**.
@@ -153,6 +154,28 @@ Allow **Install unknown apps** for the app that opens the APK (e.g. Chrome or Fi
 2. **Verify your interphone is selected** - Make sure the correct device MAC address is shown
 3. **Check permissions** - Ensure Bluetooth and Microphone permissions are granted
 4. **Restart the service** - Tap "SAVE & RESTART SERVICE" to restart
+5. **Try aggressive routing mode** - If the app shows ACTIVE but Android Auto still uses the head unit mic, enable aggressive mode (see below)
+
+### Aggressive Routing Mode (Advanced)
+
+**When to use:** Enable this option if the app shows "STATUS: ACTIVE" but Android Auto still routes voice commands to the head unit microphone instead of your interphone. This is more common on some Samsung phones and other devices with custom audio routing layers.
+
+**How to enable:**
+1. Open the app's main screen
+2. Tap the menu button (three dots) in the header
+3. Select **"Enable aggressive mode"**
+4. The setting is saved automatically and takes effect immediately
+
+**What it does:** Aggressive mode makes the app re-apply microphone routing more frequently and immediately when Google Assistant starts listening. This helps overcome OEM audio layers that try to override the app's routing choices.
+
+**Trade-offs:**
+- ✅ More likely to win routing conflicts with Android Auto or OEM audio systems
+- ⚠️ Slightly higher battery usage during voice command sessions (only when Assistant is active)
+- ⚠️ More frequent diagnostic log entries (useful for troubleshooting)
+
+**To disable:** Menu > **"Disable aggressive mode"**
+
+**If problems persist:** Enable diagnostic logging (Menu > Enable logging), try a voice command, then check the Diagnostic Log viewer. Look for entries prefixed with `[AGGRESSIVE]` - these show how many times the app had to re-assert routing control. Share the sanitized log if you need help troubleshooting.
 
 ### Service Won't Start
 
@@ -258,11 +281,3 @@ If you encounter issues or have questions:
 AAMotoMic was created to solve a real-world problem faced by motorcycle riders who want to use Android Auto safely and effectively. The app is free to use.
 
 **Ride safe, and enjoy hands-free voice control on your motorcycle!** 
-
-
-
-
-
-
-
-
